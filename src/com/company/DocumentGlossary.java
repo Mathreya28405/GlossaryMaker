@@ -15,11 +15,23 @@ public class DocumentGlossary extends ArrayList<GlossaryEntry> {
 
     //what happen when list is empty
     private int foundOrInserted(String word) {
-        if (this.contains(word) == false) {
-            GlossaryEntry e = new GlossaryEntry(word);
-
+        GlossaryEntry e = new GlossaryEntry(word);
+        if (this.isEmpty() == true) {
+            this.add(e);
+            return 0;
         }
+        for (int i = 0; i < this.size(); i++) {
+            if (this.get(i).getWord().equals(word)) {
+                return i;
+            }
+            int x = this.getWord().compareTo(word);
+            if (x < 0) {
+                this.add((this.indexOf())
+            }
+        }
+
     }
+
 
     public void addWord(String word, int num) {
         foundOrInserted(word);
