@@ -20,15 +20,23 @@ public class DocumentGlossary extends ArrayList<GlossaryEntry> {
             this.add(e);
             return 0;
         }
+        if (this.contains(e) == false) {
+            int a = 0;
+            while (a < this.size()) {
+                int x = this.get(a).getWord().compareTo(word);
+                if (x > 0) {
+                    this.add(a, e);
+                    return a;
+                }
+                a++;
+            }
+        }
         for (int i = 0; i < this.size(); i++) {
             if (this.get(i).getWord().equals(word)) {
                 return i;
             }
-            int x = this.getWord().compareTo(word);
-            if (x < 0) {
-                this.add((this.indexOf())
-            }
         }
+        return 0;
 
     }
 
