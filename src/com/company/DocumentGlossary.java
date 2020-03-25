@@ -20,7 +20,7 @@ public class DocumentGlossary extends ArrayList<GlossaryEntry> {
             this.add(e);
             return 0;
         }
-        if (this.contains(e) == false) {
+        if (this.contains(word) == false) {
             int a = 0;
             while (a < this.size()) {
                 int x = this.get(a).getWord().compareTo(word);
@@ -43,5 +43,13 @@ public class DocumentGlossary extends ArrayList<GlossaryEntry> {
 
     public void addWord(String word, int num) {
         foundOrInserted(word);
+        super.add(num);
+    }
+
+    public void addAllWords (String str, int num) {
+        String [] s = str.split(“\\W+”);
+        for (String strings = s) {
+            addWord(strings);
+        }
     }
 }
