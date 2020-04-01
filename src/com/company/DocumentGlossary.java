@@ -42,14 +42,14 @@ public class DocumentGlossary extends ArrayList<GlossaryEntry> {
 
 
     public void addWord(String word, int num) {
-        foundOrInserted(word);
-        super.add(num);
+        int x = foundOrInserted(word);
+        add(x);
     }
 
     public void addAllWords (String str, int num) {
-        String [] s = str.split(“\\W+”);
-        for (String strings = s) {
-            addWord(strings);
+        String [] s = str.split("\\W+");
+        for (String strings : s) {
+            addWord(strings, num);
         }
     }
 }

@@ -47,7 +47,7 @@ public class GlossaryMaker
 
         // I am commenting this out for the time being
 
-        /* String line;
+        String line;
         int lineNum = 0;
         while ((line = inputFile.readLine()) != null)
         {
@@ -55,18 +55,17 @@ public class GlossaryMaker
             index.addAllWords(line, lineNum);
         }
 
-         */
 
         // Save index:
         // Also commenting this out
 
-        /*
+
         for (GlossaryEntry entry : index)
             outputFile.println(entry);
 
         // Finish:
 
-         */
+
 
         inputFile.close();
         outputFile.close();
